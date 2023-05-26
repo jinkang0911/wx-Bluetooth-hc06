@@ -1,0 +1,15 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "pages": [
+    "pages/index/index",
+    "pages/comm/comm",
+    "pages/setuuid/setuuid"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智能光立方控制系统",
+    "navigationBarTextStyle": "black"
+  }}
+  

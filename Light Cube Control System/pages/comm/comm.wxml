@@ -1,0 +1,73 @@
+<text id="v5" class='devices_summary'>{{deviceadd}}</text>
+<!--横向均分 ;链接函数的调用 -->
+<view class="layout_horizontal"id="v1">
+  <button class="button_sp"style="flex:1" >{{connectState}}</button>
+</view>
+<view class="layout_horizontal"id="v4">
+<!--input class="inputView" bindinput="voteTitle"adjust-position="true"
+style="flex:1;font-size: 16px;margin-left: 5px;"  
+placeholder="写入数据"value="{{sendText}}"> 
+</input--> 
+<!--button class="button_sp"hover-class="button_sp2"bindtap='goautosend'>{{autosendText}}</button>
+  <button class="button_sp"hover-class="button_sp2"bindtap='gosend'>发送</button-->
+</view>
+<!--弹窗设置时间-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">自动发送周期[ms]</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="number" maxlength="5" bindinput="timeinputChange"   class="input" placeholder="时间ms" value='{{autoSendInv}}'></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+<!-- 弹出定时发送设置 -->
+
+
+<!-- 弹出提示框 start -->
+<view class="dialog_screen" bindtap="hideModalTips" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="dialog_attr_box" wx:if="{{showModalStatus}}">
+  <view style='background:white;position: relative;overflow: hidden;'>
+  <view class='dialog_title'>{{showTips}}</view>
+  </view>
+</view>
+<!-- 弹出提示框 end -->
+<!-- 各种效果-->
+<view class="myview">
+<view class="grid col-2 padding-sm">
+<view class="padding-sm">
+<image src="../../image/flicker.png" role="img" class="icon" bindtap="showModa6" >
+</image>
+<view>闪烁效果</view>
+</view>
+<view class="padding-sm">
+<image src="../../image/Flowing water lamp.png" role="img" class="icon" bindtap="showModal" >
+</image>
+<view>上升效果</view>
+</view>
+<view  class="padding-sm">
+<image src="../../image/Illuminate.png" role="img" class="icon" bindtap="showModa2" >
+</image>
+<view>单层滚动效果</view>
+</view>
+<view class="padding-sm">
+<image src="../../image/rotate.png" role="img" class="icon" bindtap="showModa3" >
+</image>
+<view>流水灯效果</view>
+</view>
+<view class="padding-sm">
+<image src="../../image/roll.png" role="img" class="icon" bindtap="showModa4" >
+</image>
+<view>逐个点亮效果</view>
+</view>
+<view class="padding-sm">
+<image src="../../image/rise.png" role="img" class="icon" bindtap="showModa5" >
+</image>
+<view>旋转效果</view>
+</view>
+</view>
+</view>
